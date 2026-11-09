@@ -31,14 +31,15 @@ public class RentalApp {
 PART D — Written Responses
 
 1. Why is totalRentals static, but name is not?
-Answer:
+Answer:Because name is specific to each station and totalRentals is not
 
 2. What would happen if totalRentals were not static?
-Answer:
+Answer: it would count the total rentals for each station
 
 3. When rentBike(Bike bike) is called, is a new Bike object created? Explain.
-Answer:
+Answer: no, it refrences the the bike object you specified to pull information
+from or change the status of
 
 4. Why is HOURLY_RATE declared final?
-Answer:
+Answer: Cause it cannot not be changed. the price per hour is final
 */
