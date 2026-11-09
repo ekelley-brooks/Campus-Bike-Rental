@@ -10,7 +10,8 @@ public class RentalStation {
 
     public void rentBike(Bike bike) {
         if (bike.isAvailable()){
-            bike.isAvailable = false;
+            bike.rent();
+            totalRentals++;
             System.out.println("All set!");
         } else {
             System.out.println("This bike is not avalible");
@@ -19,8 +20,7 @@ public class RentalStation {
 
     public void returnBike(Bike bike) {
         if (bike.isAvailable() == false){
-            bike.isAvailable = true;
-            totalRentals++;
+            bike.returnBike();
             System.out.println("All set!");
         } else {
             System.out.println("This bike has already been returned");
@@ -28,10 +28,12 @@ public class RentalStation {
     }
 
     public double calculateCost(int hours) {
+        System.out.println(HOURLY_RATE * hours);
         return HOURLY_RATE * hours;
     }
 
     public static int getTotalRentals() {
+        System.out.println(totalRentals);
         return totalRentals;
     }
 }

@@ -6,20 +6,22 @@ public class RentalApp {
         RentalStation r1 = new RentalStation("North");
         RentalStation r2 = new RentalStation("South");
 
-        // TODO 2: Create at least three Bike objects.
+        Bike b1 = new Bike(7252, "Mountain");
+        Bike b2 = new Bike(5678, "Road");
+        Bike b3 = new Bike(9876, "E-Bike");
 
-        // TODO 3: Rent a bike from the first station.
+        r1.rentBike(b2);
+        r1.rentBike(b2);
 
-        // TODO 4: Attempt to rent the same bike again.
+        r2.rentBike(b3);
 
-        // TODO 5: Rent a different bike from the second station.
+        r1.returnBike(b2);
+        r1.rentBike(b2);
+        
+        r1.calculateCost(3);
+        
+        RentalStation.getTotalRentals();
 
-        // TODO 6: Return the first bike and rent it again.
-
-        // TODO 7: Print the cost of a three-hour rental.
-
-        // TODO 8: Print the total successful rentals using
-        //         RentalStation.getTotalRentals().
     }
 }
 

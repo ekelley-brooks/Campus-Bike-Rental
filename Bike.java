@@ -2,7 +2,7 @@
 public class Bike {
     private int id;
     private String model;
-    public boolean isAvailable;
+    private boolean isAvailable;
 
     public Bike(int id, String model) {
         id = this.id;
@@ -23,10 +23,10 @@ public class Bike {
     }
 
     public void rent() {
-        
+        isAvailable = false;
     }
 
     public void returnBike() {
-    
+        isAvailable = true;
     }
 }
