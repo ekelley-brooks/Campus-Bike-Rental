@@ -8,20 +8,20 @@ public class RentalApp {
 
         Bike b1 = new Bike(7252, "Mountain");
         Bike b2 = new Bike(5678, "Road");
-        Bike b3 = new Bike(9876, "E-Bike");
+        Bike b3 = new Bike(9876, "Electric");
 
         r1.getName();
         r2.getName();
 
-        r1.rentBike(b2);
-        r1.rentBike(b2);
+        r1.rentBike(b2, r1);
+        r1.rentBike(b2, r1);
 
-        r2.rentBike(b3);
+        r2.rentBike(b3, r2);
 
-        r1.returnBike(b2);
-        r1.rentBike(b2);
+        r1.returnBike(b2, r1);
+        r1.rentBike(b2, r1);
 
-        r2.rentBike(b1);
+        r2.rentBike(b1, r2);
         
         r1.calculateCost(3);
         

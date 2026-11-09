@@ -5,8 +5,8 @@ public class Bike {
     private boolean isAvailable;
 
     public Bike(int id, String model) {
-        id = this.id;
-        model = this.model;
+        this.id = id;
+        this.model = model;
         isAvailable = true;
     }
 

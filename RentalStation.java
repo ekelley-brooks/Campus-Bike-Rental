@@ -13,32 +13,32 @@ public class RentalStation {
         return stationName;
     }
 
-    public void rentBike(Bike bike) {
+    public void rentBike(Bike bike, RentalStation station) {
         if (bike.isAvailable()){
             bike.rent();
             totalRentals++;
-            System.out.println("All set! Have fun on your ride!");
+            System.out.println(bike.getModel() + " bike, " +  bike.getId() + " rented from " + station.stationName +" Have fun on your ride!");
         } else {
-            System.out.println("This bike is not avalible");
+            System.out.println(bike.getModel() + " bike, " +  bike.getId() + " is not avalible");
         }
     }
 
-    public void returnBike(Bike bike) {
+    public void returnBike(Bike bike, RentalStation station) {
         if (bike.isAvailable() == false){
             bike.returnBike();
-            System.out.println("Returned Successfully");
+            System.out.println(bike.getModel() + " bike, " +  bike.getId() + " returned to " + station.stationName);
         } else {
             System.out.println("This bike has already been returned");
         }
     }
 
     public double calculateCost(int hours) {
-        System.out.println(HOURLY_RATE * hours);
+        System.out.println(hours + " hours costs $" + HOURLY_RATE * hours);
         return HOURLY_RATE * hours;
     }
 
     public static int getTotalRentals() {
-        System.out.println(totalRentals);
+        System.out.println("There have beeen " + totalRentals + " rentals total");
         return totalRentals;
     }
 }
