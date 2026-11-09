@@ -8,11 +8,16 @@ public class RentalStation {
         stationName = name;
     }
 
+    public String getName(){
+        System.out.println("The name of this station is " + stationName);
+        return stationName;
+    }
+
     public void rentBike(Bike bike) {
         if (bike.isAvailable()){
             bike.rent();
             totalRentals++;
-            System.out.println("All set!");
+            System.out.println("All set! Have fun on your ride!");
         } else {
             System.out.println("This bike is not avalible");
         }
@@ -21,7 +26,7 @@ public class RentalStation {
     public void returnBike(Bike bike) {
         if (bike.isAvailable() == false){
             bike.returnBike();
-            System.out.println("All set!");
+            System.out.println("Returned Successfully");
         } else {
             System.out.println("This bike has already been returned");
         }
