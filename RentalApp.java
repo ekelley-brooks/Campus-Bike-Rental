@@ -3,7 +3,8 @@ public class RentalApp {
     public static void main(String[] args) {
         System.out.println("Welcome to the Campus Bike Rental System!");
         
-        // TODO 1: Create two RentalStation objects.
+        RentalStation r1 = new RentalStation("North");
+        RentalStation r2 = new RentalStation("South");
 
         // TODO 2: Create at least three Bike objects.
 
