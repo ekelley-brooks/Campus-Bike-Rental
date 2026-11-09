@@ -10,9 +10,6 @@ public class RentalApp {
         Bike b2 = new Bike(5678, "Road");
         Bike b3 = new Bike(9876, "Electric");
 
-        r1.getName();
-        r2.getName();
-
         r1.rentBike(b2, r1);
         r1.rentBike(b2, r1);
 
