@@ -32,7 +32,7 @@ public class RentalStation {
         }
     }
 
-    public double calculateCost(int hours) {
+    public static double calculateCost(int hours) {
         System.out.println(hours + " hours costs $" + HOURLY_RATE * hours);
         return HOURLY_RATE * hours;
     }

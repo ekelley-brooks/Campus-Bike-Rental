@@ -20,7 +20,7 @@ public class RentalApp {
 
         r2.rentBike(b1, r2);
         
-        r1.calculateCost(3);
+        RentalStation.calculateCost(3);
         
         RentalStation.getTotalRentals();
 
